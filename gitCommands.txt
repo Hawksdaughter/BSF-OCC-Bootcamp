@@ -48,3 +48,10 @@ git rm --cached <filename>
 
 To remove EVERYTHING from staging area:
 git reset
+
+See commit history:
+git log
+
+Shortens the commit history:
+git log --oneline
+
