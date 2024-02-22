@@ -79,4 +79,17 @@ git branch -d <branch name>
 Delete the branch even if it hasn't been merged:
 git branch -D
 
+See what the state of the code was during a particular commit:
+git checkout commitID
 
+
+Remote Repository Commands
+--------------------------
+Link remote repo to a local repo:
+git remote add origin <url of the remote repo>
+
+If on a Windows PC, to rename the branch to main:
+git branch -M main
+
+To push into the origin main branch without needing to always specify it:
+git push -u origin main
