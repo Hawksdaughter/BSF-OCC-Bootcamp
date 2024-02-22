@@ -1,0 +1,26 @@
+Untracked:
+U
+
+
+
+Configuration Commands
+----------------------
+
+To change your username:
+git config --global user.name [desired username]
+
+To check what your username is:
+git config user.name
+
+To change your email:
+git config --global user.email [desired email address]
+
+To check what your email is:
+git config user.email
+
+
+
+To create a Repo
+----------------
+To initialize a local git repo:
+git init
