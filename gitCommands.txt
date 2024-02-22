@@ -1,5 +1,11 @@
-Untracked:
+Untracked file/folder:
 U
+
+Unstaged modifications:
+M
+
+Staged:
+A
 
 
 
@@ -24,3 +30,21 @@ To create a Repo
 ----------------
 To initialize a local git repo:
 git init
+
+
+Git Process
+-----------
+Show the status of our git repo:
+git status
+
+Stage files:
+git add <filename>
+
+Commit files that were staged:
+git commit -m "commit message here"
+
+Remove a single file from the staging area:
+git rm --cached <filename>
+
+To remove EVERYTHING from staging area:
+git reset
