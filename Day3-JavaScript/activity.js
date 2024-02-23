@@ -16,6 +16,20 @@ let cart = subtotal - discount;
 console.log('The total the customer owes is: $' + cart);
 
 
-// --------------------------------------------------------
+/* 
+--------------------------------------------------------
+--------------------------------------------------------
+*/
 
+let alternativeWay = 0;
+alternativeWay += shirt * 2;
+alternativeWay += shoes;
+alternativeWay += pants;
+alternativeWay += sunglasses * 3;
 
+let customerDiscount = alternativeWay * 0.1;
+
+alternativeWay -= customerDiscount;
+
+console.log('The total owed by the customer after their discount is: $' + alternativeWay + '0');
+// LOL!  It was bugging me to not have that zero at the end. :P
