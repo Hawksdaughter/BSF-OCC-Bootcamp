@@ -1,0 +1,75 @@
+CREATE documents
+
+1️⃣  db.collectionName.insertOne({"field1": "value1", "field2": "value2", "field3": "value3"});
+
+2️⃣  db.collectionName.insertMany([{"field1": "value1", "field2": "value2"}, {"field1": "value1", "field2": "value2"}]);
+
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
+READ documents
+
+1️⃣  db.collectionName.find();                        This finds all documents inside of collectionName
+2️⃣  db.collectionName.find({"field": "value"});     This finds documents with the specified fields and values
+3️⃣  db.collectionName.find().limit(#);             This limits the amount of returned documents to the number
+4️⃣  db.collectionName.find().sort({"field": 1});      This sorts results in ascending order
+5️⃣  db.collectionName.find().sort({"field": -1});     This sorts results in DESCENDING order
+
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
+UPDATE documents
+
+1️⃣  db.collectionName.updateOne({"field1": "value1"}, {$set: {"field": "value"}});
+This finds the first document with the specified field value and then updates it to whatever fields and values you enter
+
+2️⃣  db.collectionName.updateMany({"field": "value"}, {$set: {"field": "value"}});
+This version finds and updates multiple documents with the specified field value to the specified field and value
+
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
+DELETE documents
+
+1️⃣  db.collectionName.deleteOne({"field": "value" });   
+This deletes the first instance of the specified document with the field and value.  If you don't specify one and just type ({}); then it will delete the first listed document.
+
+2️⃣  db.collectionName.deleteMany({"field": "value"});   
+This deletes ALL documents with the specified field and value
+
+3️⃣  db.collectionName.deleteMany({});                   
+This will delete ALL OF THE DOCUMENTS INSIDE OF THE COLLECTION!
+
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
+COMPARISON OPERATOR FINDING of documents
+
+1️⃣  db.collectionName.find({"field": { $eq: value }});       
+This finds all documents with the specified field equal to the specified value (which should be numerical. Hence, no quotation marks)
+
+2️⃣  db.collectionName.find({"field": { $ne: value }});       
+This finds all documents with the specified field NOT equal to the specified numerical value
+
+3️⃣  db.collectionName.find({"field": { $gt: value }});       
+This finds all documents with the specified field greater than the specified numerical value
+
+4️⃣  db.collectionName.find({"field": { $lt: value }});       
+This finds all documents with the specified field LESS than the specified numerical value
+
+5️⃣  db.collectionName.find({"field": { $gte: value }});        
+This finds all documents with the specified field greater than OR equal to the specified numerical value
+
+6️⃣  db.collectionName.find({ "field": { $lte: value }});
+This finds all documents with the specified field LESS than OR equal to the specified numerical value
+
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
+LOGICAL OPERATOR FINDING of documents
+
+1️⃣  db.collectionName.find({$and: [{"field": "value"}, {"field": "value"}]});
+AND: This finds all documents with BOTH of the entered field/value combinations (which can be strings or numerical.  Shown here using strings for both values)
+
+2️⃣  db.collectionName.find({$or: [{"field": "value"}, {"field": {$gte: value}}]});
+OR:  This finds all documents with EITHER of the entered field/value combinations (which can be strings or numerical.  Shown here using a numerical value in the second half)
